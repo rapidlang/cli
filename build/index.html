@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      WebAssembly.instantiateStreaming(fetch("main.wasm"), {}).then(results => {
+        console.log(results.instance.exports.main());
+      });
+    </script>
+  </head>
+
+  <body>
+    Welcome to Rapid CLI !
+  </body>
+</html>
