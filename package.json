@@ -1,5 +1,5 @@
 {
-  "name": "@rapid/cli",
+  "name": "@rapidlang/cli",
   "version": "0.1.3",
   "main": "bin/index.js",
   "scripts": {
