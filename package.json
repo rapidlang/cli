@@ -1,6 +1,6 @@
 {
   "name": "@rapid/cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "bin/index.js",
   "scripts": {
     "start": "serve build & nodemon -e rapid --watch ./src --exec 'rapid src/main.rapid -o build/main.wasm'",
