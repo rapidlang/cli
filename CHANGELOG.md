@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.7 (2020-03-31)
+
+
+### Bug Fixes
+
+* 🐛 package.json conflict ([d12c058](https://github.com/rapidlang/cli/commit/d12c058f787027f8650fcb23d293ddd449f99ce8))
+
 ### 0.1.6 (2020-03-31)
 
 
