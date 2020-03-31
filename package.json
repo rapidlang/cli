@@ -22,34 +22,19 @@
     "rapid-lang": "^0.9.17"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
     "@types/node": "^13.9.8",
     "@types/prompts": "^2.0.5",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.2",
     "git-cz": "^4.3.1",
-    "husky": "^4.2.3",
     "nodemon": "^2.0.2",
     "prettier": "^2.0.2",
     "standard-version": "^7.1.0",
     "typescript": "^3.8.3"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
