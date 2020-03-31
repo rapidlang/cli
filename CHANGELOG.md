@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.6 (2020-03-31)
+
+
+### Features
+
+* 🎸 cli prompts, eslint, prettier ([74d4760](https://github.com/rapidlang/cli/commit/74d4760508b5207197c23d8671398f9a0d18e62d))
+
 ### 0.1.5 (2020-03-29)
 
 ### 0.1.4 (2020-03-29)
