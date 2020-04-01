@@ -18,7 +18,7 @@ jobs:
           git config --local user.name "GitHub Action"
           echo $VERSION
         env:
-          VERSION: echo $(yarn bump)
+          VERSION: $(yarn bump)
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
       - run: yarn publish
         env:
