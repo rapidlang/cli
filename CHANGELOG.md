@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.12 (2020-04-01)
+
+
+### Features
+
+* 🎸 commitizen and setup semver ([eb032ca](https://github.com/rapidlang/cli/commit/eb032caf2be6cd6fa7d0d6acf45e6e0fde3a7ba3))
+
 ### 0.1.11 (2020-04-01)
 
 ### 0.1.10 (2020-04-01)
