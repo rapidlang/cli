@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.10 (2020-04-01)
+
+
+### Features
+
+* 🎸 generating package.yml with prompts ([80a0fe5](https://github.com/rapidlang/cli/commit/80a0fe54cc7e5489580f1c54f43ee9617c4f85f0))
+
 ### 0.1.9 (2020-03-31)
 
 ### 0.1.8 (2020-03-31)
