@@ -18,7 +18,7 @@ jobs:
           git config --local user.name "GitHub Action"
           echo "::set-env name=VERSION::$(yarn bump)"
           echo "${{env.VERSION}}"
-          yarn version --${{env.VERSION}} --no-git-tag-version
+          yarn version --patch --no-git-tag-version
           yarn changelog
           git tag v0.3.0
           git add .
