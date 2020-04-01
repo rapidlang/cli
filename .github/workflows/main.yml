@@ -16,16 +16,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # yarn changelog
-          # echo "::set-env name=MY_VERSION::$(yarn bump)"
-          echo ${VERSION}
-          echo ${{VERSION}}
-          echo ${{env.VERSION}}
-          # yarn version --${{env.MY_VERSION}} --no-git-tag-version
-          # git add .
-          # git commit -m 'chore(release)'
-          # git tag ${MY_VERSION}
-          # git push --follow-tags
+          echo $VERSION
         env:
           VERSION: echo $(yarn bump)
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
