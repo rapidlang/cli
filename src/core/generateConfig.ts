@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 
-const generate = (name: string, author: string, licesne: string): string => {
+const generateConfig = (name: string, author: string, licesne: string): string => {
   const data = {
     app: {
       name,
@@ -9,13 +9,12 @@ const generate = (name: string, author: string, licesne: string): string => {
       licesne,
     },
     config: {
-      input: 'src/input',
-      output: 'src/output',
-      dependencies: null,
+      input: 'src/main.rapid',
+      output: 'bin/main.wasm',
     },
   };
 
   return yaml.safeDump(data);
 };
 
-export default generate;
+export default generateConfig;

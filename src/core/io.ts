@@ -1,7 +1,17 @@
 import fs from 'fs';
+import { ncp } from 'ncp';
 
-const save = (path: string, source: string): void => {
+export const save = (path: string, source: string): void => {
   fs.writeFileSync(`${process.cwd()}/${path}`, source);
 };
 
-export default save;
+export const copy = (source: string, destination: string): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    ncp(source, destination, (err) => {
+      if (err) {
+        reject(err);
+      }
+      resolve();
+    });
+  });
+};
