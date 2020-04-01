@@ -19,7 +19,7 @@ jobs:
           yarn changelog
           echo "::set-env name=VERSION::$(yarn bump)"
           # echo ${VERSION}
-          echo ${{VERSION}}
+          # echo ${{VERSION}}
           echo ${{env.VERSION}}
           yarn version --${{env.VERSION}} --no-git-tag-version
           git add .
