@@ -9,9 +9,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn build
+      - name: Install, Build, Test
+        run: |
+          yarn install
+          yarn lint
+          yarn build
       - name: Check Version
         run: |
           git config --local user.email "action@github.com"
@@ -22,13 +24,16 @@ jobs:
           yarn version --${{env.BUMP_VERSION}} --no-git-tag-version
           yarn changelog
           echo "::set-env name=NEW_VERSION::$(yarn -s package-version)"
-      - name: Release
+      - name: Commit Version & Changelog
         run: |
           git add .
           git commit -m 'chore(release): ${{env.NEW_VERSION}}'
           git tag v${{env.NEW_VERSION}}
-          git push --follow-tags
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-      - run: yarn publish
+          git push
+          git push --tags
+      - name: Publish
+        - run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+          yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
