@@ -3,7 +3,7 @@
 
 ### Features
 
-* 🎸 reset version ([74c6c5f](https://github.com/rapidlang/cli/commit/74c6c5f7ec23243d21711a975d9bd358e0811736))
+* 🎸 reset versin ([79fed88](https://github.com/rapidlang/cli/commit/79fed881ecb14b885e6f8c355d51741bb0035d13))
 
 
 
