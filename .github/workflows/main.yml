@@ -12,16 +12,23 @@ jobs:
       - run: yarn install
       - run: yarn lint
       - run: yarn build
-      - name: Release
+      - name: Check Version
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           echo "::set-env name=BUMP_VERSION::$(yarn -s bump)"
-      - name: ogien
+      - name: Bump Version & Changelog
         run: |
-          echo "${{env.BUMP_VERSION}}"
-          yarn version --${{env.BUMP_VERSION}}
-      # - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-      # - run: yarn publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          yarn version --${{env.BUMP_VERSION}} --no-git-tag-version
+          yarn changelog
+          echo "::set-env name=NEW_VERSION::$(yarn -s package-version)"
+      - name: Release
+        run: |
+          git add .
+          git commit -m 'chore(release): ${{env.NEW_VERSION}}'
+          git tag v${{env.NEW_VERSION}}
+          git push --follow-tags
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
