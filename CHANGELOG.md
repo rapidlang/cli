@@ -3,7 +3,7 @@
 
 ### Features
 
-* 🎸 cleanup, readme, version ([64cef7f](https://github.com/rapidlang/cli/commit/64cef7f236eb4dd5af48e3eed8880ed32f8c2536))
+* 🎸 version 0.1.0 ([d704281](https://github.com/rapidlang/cli/commit/d704281bc6981d175eb0f151cbd165e04caca5c8))
 
 
 
