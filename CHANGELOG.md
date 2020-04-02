@@ -1,9 +1,9 @@
-# 0.2.0 (2020-04-02)
+# 0.1.0 (2020-04-02)
 
 
 ### Features
 
-* 🎸 test ([6b94d20](https://github.com/rapidlang/cli/commit/6b94d20ab50bafcd24ea5b5b9c6fa554b3bf8d51))
+* 🎸 initial ([#10](https://github.com/rapidlang/cli/issues/10)) ([c89d046](https://github.com/rapidlang/cli/commit/c89d04602d82a002790942100f07b3caa1694a20))
 
 
 
