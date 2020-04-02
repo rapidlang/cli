@@ -1,8 +1,8 @@
-name: Pipeline
+name: Build & Test
 on: [push]
 jobs:
   build:
-    name: Build
+    name: Build & Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,26 +14,3 @@ jobs:
           yarn install
           yarn lint
           yarn build
-      - name: Check Version
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          echo "::set-env name=BUMP_VERSION::$(yarn -s bump)"
-      - name: Bump Version & Changelog
-        run: |
-          yarn version --${{env.BUMP_VERSION}} --no-git-tag-version
-          yarn changelog
-          echo "::set-env name=NEW_VERSION::$(yarn -s package-version)"
-      - name: Commit Version & Changelog
-        run: |
-          git add .
-          git commit -m 'chore(release): ${{env.NEW_VERSION}}'
-          git tag v${{env.NEW_VERSION}}
-          git push
-          git push --tags
-      - name: Publish
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-          yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
