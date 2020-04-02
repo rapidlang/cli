@@ -34,12 +34,6 @@ jobs:
           git tag v${{env.NEW_VERSION}}
           git push
           git push --tags
-      - name: Sync develop
-        run: |
-          git fetch
-          git checkout develop
-          git pull origin master
-          git push origin develop
       - name: Publish
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
