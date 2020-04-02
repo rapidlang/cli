@@ -25,7 +25,7 @@ jobs:
           git commit -m 'chore(release): "${{env.CURRENT_VERSION}}"'
           git push --follow-tags
         env:
-          CURRENT_VERSION: ${{ $(echo yarn -s package-version) }}
+          CURRENT_VERSION: ${{ (echo yarn -s package-version) }}
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
       - run: yarn publish
         env:
