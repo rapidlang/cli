@@ -3,7 +3,7 @@
 
 ### Features
 
-* 🎸 cli node env ([fd50ad6](https://github.com/rapidlang/cli/commit/fd50ad6417097aa52aafa3d3b2519240300afd46))
+* 🎸 re publish ([09d0c5d](https://github.com/rapidlang/cli/commit/09d0c5d350e7841d504e34b4aa7aa75f2e506976))
 
 
 
