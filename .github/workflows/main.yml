@@ -18,13 +18,14 @@ jobs:
           git config --local user.name "GitHub Action"
           echo "::set-env name=BUMP_VERSION::$(yarn bump)"
           yarn version --patch --no-git-tag-version
-          echo "::set-env name=CURRENT_VERSION::$(yarn -s package-version)"
-          echo ${{env.CURRENT_VERSION}}
+          echo $CURRENT_VERSION
           yarn changelog
           git tag ${env.CURRENT_VERSION}
           git add .
           git commit -m 'chore(release): "${{env.CURRENT_VERSION}}"'
           git push --follow-tags
+        env:
+          CURRENT_VERSION: $(yarn -s package-version)
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
       - run: yarn publish
         env:
