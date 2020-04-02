@@ -16,7 +16,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          echo "::set-env name=BUMP_VERSION::$(yarn bump)"
+          echo "::set-env name=BUMP_VERSION::$(yarn -s bump)"
       - name: ogien
         run: |
           echo "${{env.BUMP_VERSION}}"
