@@ -36,7 +36,8 @@ jobs:
           git push --tags
       - name: Sync develop
         run: |
-          git checkout --track origin/develop
+          git fetch
+          git checkout develop
           git rebase master
           git push origin develop -f
       - name: Publish
