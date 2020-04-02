@@ -20,9 +20,10 @@ jobs:
           echo "${{env.BUMP_VERSION}}"
           yarn version --patch --no-git-tag-version
           echo "::set-env name=CURRENT_VERSION::$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')"
-          echo $env.CURRENT_VERSION
+          echo ${{env.CURRENT_VERSION}}
+          echo $CURRENT_VERSION
           yarn changelog
-          git tag $env.CURRENT_VERSION}
+          git tag $env.CURRENT_VERSION
           git add .
           git commit -m 'chore(release): "${{env.CURRENT_VERSION}}"'
           git push --follow-tags
