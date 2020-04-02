@@ -14,7 +14,8 @@
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "bump": "conventional-recommended-bump -p angular",
-    "lint": "eslint src --ext .js,.ts"
+    "lint": "eslint src --ext .js,.ts",
+    "package-version": "echo $npm_package_version"
   },
   "repository": "https://github.com/rapidlang/cli.git",
   "author": "Michal Jach <michaljach@gmail.com>",
