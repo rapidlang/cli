@@ -3,7 +3,7 @@
 
 ### Features
 
-* 🎸 cli version, scoping, init ([b644423](https://github.com/rapidlang/cli/commit/b6444238eaa6cb3525da72942aa94fccdaae9866))
+* 🎸 cli node env ([fd50ad6](https://github.com/rapidlang/cli/commit/fd50ad6417097aa52aafa3d3b2519240300afd46))
 
 
 
