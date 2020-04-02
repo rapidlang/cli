@@ -19,7 +19,7 @@ jobs:
           echo "::set-env name=BUMP_VERSION::$(yarn bump)"
           yarn version --patch --no-git-tag-version
           echo "::set-env name=CURRENT_VERSION::$(yarn -s package-version)"
-          echo ${env.CURRENT_VERSION}
+          echo ${{env.CURRENT_VERSION}}
           yarn changelog
           git tag ${env.CURRENT_VERSION}
           git add .
