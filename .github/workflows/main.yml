@@ -20,6 +20,7 @@ jobs:
       - name: ogien
         run: |
           echo "${{env.BUMP_VERSION}}"
+          yarn version --${{env.BUMP_VERSION}}
       # - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
       # - run: yarn publish
       #   env:
