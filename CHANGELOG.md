@@ -3,7 +3,7 @@
 
 ### Features
 
-* 🎸 initial ([#10](https://github.com/rapidlang/cli/issues/10)) ([c89d046](https://github.com/rapidlang/cli/commit/c89d04602d82a002790942100f07b3caa1694a20))
+* 🎸 intiial versioning and publish scoped ([73cf2c0](https://github.com/rapidlang/cli/commit/73cf2c066be4c710b590e8c793a1fcb7904a64b3))
 
 
 
