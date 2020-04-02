@@ -1,4 +1,4 @@
-![Pipeline](https://github.com/rapidlang/cli/workflows/Pipeline/badge.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rapidlang/cli/blob/master/LICENSE)
+![Pipeline](https://github.com/rapidlang/cli/workflows/Pipeline/badge.svg) [![npm version](https://img.shields.io/npm/v/@rapid-lang/cli.svg?style=flat)](https://www.npmjs.com/package/@rapid-lang/cli) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/@rapid-lang/cli/blob/master/LICENSE)
 
 # RAPID CLI [WIP]
 

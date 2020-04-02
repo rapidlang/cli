@@ -1,13 +1,13 @@
 {
-  "name": "rapidlang-cli",
-  "version": "0.1.0",
+  "name": "@rapid-lang/cli",
+  "version": "0.0.0",
   "main": "bin/index.js",
   "files": [
     "bin",
     "schema"
   ],
   "bin": {
-    "rapid-cli": "./bin/index.js"
+    "rapid": "./bin/index.js"
   },
   "scripts": {
     "build": "tsc",
