@@ -38,8 +38,8 @@ jobs:
         run: |
           git fetch
           git checkout develop
-          git rebase master
-          git push origin develop -f
+          git pull origin master
+          git push origin develop
       - name: Publish
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
