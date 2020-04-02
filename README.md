@@ -1,17 +1,21 @@
 ![Pipeline](https://github.com/rapidlang/cli/workflows/Pipeline/badge.svg) [![npm version](https://img.shields.io/npm/v/@rapid-lang/cli.svg?style=flat)](https://www.npmjs.com/package/@rapid-lang/cli) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/@rapid-lang/cli/blob/master/LICENSE)
 
-# RAPID CLI [WIP]
+# Rapid CLI
 
-Creates a nice development environment
+Creates a development environment with:
 
 - compiling
 - reloading
 - deploying
-- adding dependencies
+- managing dependencies
 
 ### Install
 
-`npm i rapid-cli -g`
+`npm i @rapid-lang/cli -g`
+
+### Basic Usage
+
+`rapid <command> <params>`
 
 ### Language Documentation
 
@@ -19,9 +23,7 @@ Full documentation is available on https://rapid-lang.org page.
 
 ### Development
 
-Use start script to start the server, watch changes and auto re-compile sources.
-
-`yarn start`
+Follow [Github Flow](https://guides.github.com/introduction/flow/) and [Conventional Commits](https://www.conventionalcommits.org/) via `yarn commit` command. Do linting with `yarn lint` and build project with `yarn build`.
 
 ### Changelog
 

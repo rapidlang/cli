@@ -1,6 +1,6 @@
 {
   "name": "@rapid-lang/cli",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "main": "bin/index.js",
   "files": [
     "bin",
@@ -23,8 +23,7 @@
   "dependencies": {
     "js-yaml": "^3.13.1",
     "ncp": "^2.0.0",
-    "prompts": "^2.3.2",
-    "rapid-lang": "^0.9.17"
+    "prompts": "^2.3.2"
   },
   "devDependencies": {
     "@types/js-yaml": "^3.12.3",
