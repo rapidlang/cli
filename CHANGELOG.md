@@ -3,7 +3,7 @@
 
 ### Features
 
-* 🎸 intiial version, scoping ([e28dff3](https://github.com/rapidlang/cli/commit/e28dff3c09558380412f564e8d15909f8cb4710e))
+* 🎸 cleanup, readme, version ([64cef7f](https://github.com/rapidlang/cli/commit/64cef7f236eb4dd5af48e3eed8880ed32f8c2536))
 
 
 
