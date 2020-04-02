@@ -16,13 +16,14 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          echo "::set-env name=VERSION::$(yarn bump)"
-          echo "${{env.VERSION}}"
+          echo "::set-env name=BUMP_VERSION::$(yarn bump)"
+          echo "::set-env name=CURRENT_VERSION::$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')"
+          echo "${{env.BUMP_VERSION}}"
           yarn version --patch --no-git-tag-version
           yarn changelog
-          git tag v0.3.0
+          git tag $CURRENT_VERSION
           git add .
-          git commit -m 'chore(release): 0.3.0'
+          git commit -m 'chore(release): "${{CURRENT_VERSION}}"'
           git push --follow-tags
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
       - run: yarn publish
