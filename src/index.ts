@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import init from './core/prompts';
 import generateConfig from './core/generateConfig';
 import generateSchema from './core/generateSchema';
