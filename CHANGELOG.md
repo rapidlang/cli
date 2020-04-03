@@ -1,9 +1,9 @@
-# 0.1.0 (2020-04-02)
+# 0.1.0 (2020-04-03)
 
 
 ### Features
 
-* 🎸 plz reset ([b79fafb](https://github.com/rapidlang/cli/commit/b79fafbe7381184c400a69aa0d73c1f135570519))
+* 🎸 version reset ([4c613ed](https://github.com/rapidlang/cli/commit/4c613ed7b06fd37eb891f634efeb1da9ce17c087))
 
 
 
