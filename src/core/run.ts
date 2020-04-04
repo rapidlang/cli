@@ -1,3 +1,4 @@
+import compile from '@rapid-lang/compiler';
 import handler from 'serve-handler';
 import http from 'http';
 import { exist } from './io';
@@ -8,11 +9,18 @@ const runAction = (): void => {
   }
 
   const server = http.createServer((request, response) => {
-    return handler(request, response);
+    return handler(request, response, { public: 'public' });
   });
 
   server.listen(2000, () => {
+    const input = {
+      _: ['./src/main.rapid'],
+      o: './public/main.wasm',
+      s: true,
+    };
+    compile(input);
     console.log('🚀 Rapid development server is running at http://localhost:2000');
+    console.log('🕒 Waiting for changes...');
   });
 };
 
