@@ -2,6 +2,7 @@ import compile from '@rapid-lang/compiler';
 import handler from 'serve-handler';
 import http from 'http';
 import { exist } from './io';
+import watch from './watch';
 
 const runAction = (): void => {
   if (!exist(`${process.cwd()}/package.yml`)) {
@@ -20,7 +21,7 @@ const runAction = (): void => {
     };
     compile(input);
     console.log('🚀 Rapid development server is running at http://localhost:2000');
-    console.log('🕒 Waiting for changes...');
+    watch();
   });
 };
 
