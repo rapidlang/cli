@@ -26,3 +26,7 @@ export const copy = (source: string, destination: string): Promise<void> => {
     });
   });
 };
+
+export const exist = (path: string): boolean => {
+  return fs.existsSync(path);
+};

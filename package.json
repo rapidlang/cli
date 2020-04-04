@@ -21,9 +21,11 @@
   "author": "Michal Jach <michaljach@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "http": "^0.0.1-security",
     "js-yaml": "^3.13.1",
     "ncp": "^2.0.0",
     "prompts": "^2.3.2",
+    "serve-handler": "^6.1.2",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
@@ -31,6 +33,7 @@
     "@types/ncp": "^2.0.3",
     "@types/node": "^13.9.8",
     "@types/prompts": "^2.0.5",
+    "@types/serve-handler": "^6.1.0",
     "@types/yargs": "^15.0.4",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
