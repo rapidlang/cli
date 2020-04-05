@@ -4,7 +4,7 @@ import http from 'http';
 import { exist } from './io';
 import watch from './watch';
 
-const runAction = (): void => {
+const runAction = (port = 2000): void => {
   if (!exist(`${process.cwd()}/package.yml`)) {
     throw new Error('Not a Rapid project, package.yml not found.');
   }
@@ -13,15 +13,15 @@ const runAction = (): void => {
     return handler(request, response, { public: 'public' });
   });
 
-  server.listen(2000, () => {
+  server.listen(port, () => {
     const input = {
       _: ['./src/main.rapid'],
       o: './public/main.wasm',
-      p: 2000,
+      p: port,
       s: true,
     };
     compile(input);
-    console.log('🚀 Rapid development server is running at http://localhost:2000');
+    console.log(`🚀 Rapid development server is running at http://localhost:${port}`);
     watch();
   });
 };

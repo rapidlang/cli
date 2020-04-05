@@ -9,7 +9,7 @@ switch (argv._[0]) {
     initAction();
     break;
   case 'run':
-    runAction();
+    runAction(argv.port);
     break;
   default:
     break;

@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@rapid-lang/compiler@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@rapid-lang/compiler/-/compiler-0.2.0.tgz#510df610e269be99a115c4f31e1030ffe52fbdb9"
-  integrity sha512-OTDoBnQyp3BG+yj1IukyU6xvvTo5BC5VAd8oXCj9384pXJd82+db8pI+/C1TX2smEyGxWYZXeKb74lGf0eYZ9Q==
+"@rapid-lang/compiler@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@rapid-lang/compiler/-/compiler-0.3.2.tgz#1ca40309e74e4bcd7280c4f75c7f76c169d0773e"
+  integrity sha512-IYQ5m8tZhaFTvtMKUNKkHa/RPhrNIAPNI7ySsXSjASvElIfJxRLsVyiOxq5impWpEgh4/dMLMq3BjoxEU6PZMg==
   dependencies:
     binaryen "^91.0.0"
     chalk "^3.0.0"
