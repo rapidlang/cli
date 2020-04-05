@@ -8,9 +8,12 @@ export interface Args {
 }
 
 export const { argv }: { argv: Args } = yargs
-  .options({})
   .demandCommand(1)
-  .command('init', 'Initiates Rapid project with boilerplate');
+  .command('init', 'Initiates Rapid project with boilerplate')
+  .command('run', 'Runs a development server')
+  .alias('v', 'version')
+  .alias('h', 'help')
+  .alias('r', 'run');
 
 export const save = (path: string, source: string): void => {
   fs.writeFileSync(`${process.cwd()}/${path}`, source);

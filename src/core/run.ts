@@ -17,6 +17,7 @@ const runAction = (): void => {
     const input = {
       _: ['./src/main.rapid'],
       o: './public/main.wasm',
+      p: 2000,
       s: true,
     };
     compile(input);
