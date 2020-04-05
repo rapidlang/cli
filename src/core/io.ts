@@ -3,7 +3,6 @@ import yargs from 'yargs';
 import { ncp } from 'ncp';
 
 export interface Args {
-  [x: string]: unknown;
   _: string[];
   port?: number;
 }

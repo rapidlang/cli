@@ -21,7 +21,7 @@
   "author": "Michal Jach <michaljach@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@rapid-lang/compiler": "^0.3.2",
+    "@rapid-lang/compiler": "^0.3.3",
     "@types/nodemon": "^1.19.0",
     "http": "^0.0.1-security",
     "js-yaml": "^3.13.1",
